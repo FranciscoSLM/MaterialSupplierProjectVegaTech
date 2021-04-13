@@ -1,0 +1,27 @@
+<div class="registerContainer">
+    <form action="/material/create/add" method="post">    
+        <p>Select the supplier</p>
+        <select name="IdSupplier" id="IdSupplier">
+            {{#each supplier}}
+            <option value="{{dataValues.id}}">{{dataValues.Name}}</option>
+            {{/each}}
+        </select>
+        {{#each supplier}}
+            <small class="QrCodeSmall" id="{{dataValues.id}}"> 
+                <p class="QrCodeP">{{dataValues.QrCode}}</p>
+            </small>
+        {{/each}}
+        <p>Code</p>
+        <input type="text" name="Code">
+        <p>Name:</p>
+        <input type="text" name="Name">
+        <p>Description:</p>
+        <input type="text" name="Description">
+        <p>Fiscal code:</p>
+        <input type="text" name="FiscalCode">
+        <p>Specie:</p>
+        <input type="text" name="Specie">
+        <p></p>
+        <button type="submit">Register</button> 
+    </form>
+</div>

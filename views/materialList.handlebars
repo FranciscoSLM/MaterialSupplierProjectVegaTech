@@ -1,0 +1,29 @@
+<div class="tableContainer" style="overflow-x:auto;">
+    <table> 
+        <thead>
+            <th>Supplier</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Fiscal Code</th>
+            <th>Specie</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            {{#each materials}}
+            <tr>
+                <td>{{dataValues.IdSupplier}}</td>
+                <td>{{dataValues.Code}}</td>
+                <td>{{dataValues.Name}}</td>
+                <td>{{dataValues.Description}}</td>
+                <td>{{dataValues.FiscalCode}}</td>
+                <td>{{dataValues.Specie}}</td>
+                <td><a href="/material/delete/{{dataValues.id}}"><button class="deleteBtn">Delete</button></a></td>
+                <td><a href="/material/update/{{dataValues.id}}"><button>Update</button></a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<a href="/material/create"><button>Register a new material</button></a>

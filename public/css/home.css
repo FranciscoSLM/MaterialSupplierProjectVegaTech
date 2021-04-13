@@ -1,0 +1,46 @@
+button {
+    background-color: #403f3f; /* Green */
+    max-width: 200px;
+    color: white;
+    padding: 15px 32px;
+    margin-top:15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #403f3f;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: #62929a;
+    border: 2px solid #62929a;
+}
+button:active, button:focus {
+    outline: 0;
+    outline-style: none;
+    border: 2px solid #62929a;
+    background-color: #403f3f;
+}
+
+body {
+    background-color: white;
+}
+.acessButtonsContainer {
+    margin-top: 65px;
+    text-align: center;
+}
+.centralLogo{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centralLogo .logoImg{
+    align-self: center;
+    max-width:60%;
+    padding-bottom: 10px;
+}

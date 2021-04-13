@@ -1,0 +1,17 @@
+<form action="/supplier/update" method="post">
+{{#post}}
+    <div class="registerContainer">
+        <p>Name</p>
+        <input type="text" name="Name" value="{{dataValues.Name}}">
+        <p>CNPJ:</p>
+        <input type="text" name="CNPJ" value="{{dataValues.CNPJ}}">
+        <p>ZipCode:</p>
+        <input type="text" name="ZipCode" value="{{dataValues.ZipCode}}">
+        <input type="hidden" name="id" value="{{dataValues.id}}">
+        <input type="hidden" name="QrCode" value="{{dataValues.QrCode}}">
+        <input type="hidden" name="createdAt" value="{{dataValues.createdAt}}">
+        <p></p>
+        <button type="submit">Update</button>
+    </div>
+{{/post}}
+</form>

@@ -1,0 +1,31 @@
+<div class class="registerContainer">
+    <form action="/material/update" method="post">
+        <p>Select the supplier</p>
+        <select name="IdSupplier" id="IdSupplier"value="{{dataValues.IdSupplier}}">
+            {{#each supplier}}
+            <option value="{{dataValues.id}}">{{dataValues.Name}}</option>
+            {{/each}}
+        </select>
+        {{#each supplier}}
+            <small class="QrCodeSmall" id="{{dataValues.id}}"> 
+                {{dataValues.QrCode}}
+            </small>
+        {{/each}}
+        {{#material}}
+        <p>Code</p>
+        <input type="text" name="Code" value="{{dataValues.Code}}">
+        <p>Name:</p>
+        <input type="text" name="Name" value="{{dataValues.Name}}">
+        <p>Description:</p>
+        <input type="text" name="Description" value="{{dataValues.Description}}">
+        <p>Fiscal code:</p>
+        <input type="text" name="FiscalCode" value="{{dataValues.FiscalCode}}">
+        <p>Specie:</p>
+        <input type="text" name="Specie" value="{{dataValues.Specie}}">
+
+        <input type="hidden" name="id" value="{{dataValues.id}}">
+        {{/material}}
+        <p></p>
+        <button type="submit">Update</button>
+    </form>
+</div>

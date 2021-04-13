@@ -1,0 +1,23 @@
+<div class="tableContainer" style="overflow-x:auto;">   
+    <table> 
+        <thead>
+            <th>Name</th>
+            <th>CNPJ</th>
+            <th>ZipCode</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            {{#each supplier}}
+            <tr>
+                <td>{{dataValues.Name}}</td>
+                <td>{{dataValues.CNPJ}}</td>
+                <td>{{dataValues.ZipCode}}</td>
+                <td><a href="/supplier/delete/{{dataValues.id}}"><button class="deleteBtn">Delete</button></a></td>
+                <td><a href="/supplier/update/{{dataValues.id}}"><button>Update</button></a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<a href="/supplier/create"><button>Register a new supplier</button></a>
